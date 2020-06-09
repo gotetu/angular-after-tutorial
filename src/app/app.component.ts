@@ -1,4 +1,6 @@
 import { Component, VERSION } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { User } from './user';
 
 @Component({
   selector: 'my-app',
@@ -6,5 +8,15 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular ' + VERSION.major;
+
+  users: User[] = [];
+
+  constructor(private http: HttpClient) { }
+
+  ngOnInit() {
+    this.http.get<{ data: User[] }>('https://reqres.in/api/users').subscribe(resp => {
+      this.users = resp.data;
+    });
+  }
+
 }

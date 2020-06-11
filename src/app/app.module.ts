@@ -9,11 +9,13 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserListUsecase } from './user-list.usecase';
 import { Store } from './store.service';
 import { UserListFilterComponent } from './user-list-filter/user-list-filter.component';
+import { UserApiService } from './user-api.service';
+import { UserDetailPageComponent } from './user-detail-page/user-detail-page.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule ],
-  declarations: [ AppComponent, UserListItemComponent, UserListComponent, UserListFilterComponent, ],
+  declarations: [ AppComponent, UserListItemComponent, UserListComponent, UserListFilterComponent, UserDetailPageComponent, ],
   bootstrap:    [ AppComponent ],
-  providers: [UserListUsecase, Store]
+  providers: [UserListUsecase, Store, UserApiService]
 })
 export class AppModule { }

@@ -6,7 +6,7 @@ import { UserDetailPageComponent } from './user-detail-page/user-detail-page.com
   imports: [
     RouterModule.forRoot([
       {
-        path: 'users/:userid',
+        path: 'users/:userId',
         component: UserDetailPageComponent
       }
     ])

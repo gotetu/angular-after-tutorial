@@ -11,11 +11,13 @@ import { Store } from './store.service';
 import { UserListFilterComponent } from './user-list-filter/user-list-filter.component';
 import { UserApiService } from './user-api.service';
 import { UserDetailPageComponent } from './user-detail-page/user-detail-page.component';
+import { UserDetailUsecase } from './user-detail.usecase';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule ],
+  imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule, AppRoutingModule ],
   declarations: [ AppComponent, UserListItemComponent, UserListComponent, UserListFilterComponent, UserDetailPageComponent, ],
   bootstrap:    [ AppComponent ],
-  providers: [UserListUsecase, Store, UserApiService]
+  providers: [UserListUsecase, Store, UserApiService, UserDetailUsecase]
 })
 export class AppModule { }

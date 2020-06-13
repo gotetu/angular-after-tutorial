@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { filter, map } from 'rxjs/operators';
-import { Store } from './store.service';
-import { UserApiService } from './user-api.service';
-import { User } from './user';
+import { Store } from '../service/store.service';
+import { UserApiService } from '../service/user-api.service';
+import { User } from '../user';
 
 @Injectable({ providedIn: 'root' })
 export class UserListUsecase {

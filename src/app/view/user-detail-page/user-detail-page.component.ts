@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { UserDetailUsecase } from '../user-detail.usecase';
+import { UserDetailUsecase } from '../../usecase/user-detail.usecase';
 import { map, takeUntil, distinctUntilChanged } from 'rxjs/operators';
 
 @Component({

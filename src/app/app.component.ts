@@ -1,6 +1,6 @@
 import { Component, VERSION } from '@angular/core';
 import { User } from './user';
-import { UserListUsecase } from './user-list.usecase';
+import { UserListUsecase } from './usecase/user-list.usecase';
 import { UserListFilter } from './state';
 
 @Component({

@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { takeUntil, map, distinctUntilChanged } from 'rxjs/operators'
-import { UserApiService } from './user-api.service';
-import { Store } from './store.service';
+import { UserApiService } from '../service/user-api.service';
+import { Store } from '../service/store.service';
 
 @Injectable({providedIn: 'root'})
 export class UserDetailUsecase {
